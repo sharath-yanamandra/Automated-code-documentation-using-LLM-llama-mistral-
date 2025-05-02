@@ -20,6 +20,7 @@ This tool analyzes Python and Java source code, extracts the structure (classes,
 - Python 3.8 or higher
 - 8GB+ RAM (for running the LLM)
 - LLM model file (e.g., Mistral 7B instruct model)
+- Please download the Mistral 7B model from "https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF" and paste the model into the folder named models.
 - Required Python packages (see Installation section)
 
 ## Installation
