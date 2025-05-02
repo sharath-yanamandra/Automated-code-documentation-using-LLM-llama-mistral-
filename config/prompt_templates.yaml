@@ -1,0 +1,103 @@
+# Prompt templates for different code components
+
+class: |
+  You are an expert technical writer specializing in P&C insurance software documentation.
+  
+  Generate comprehensive documentation for the following class from a P&C insurance system:
+  
+  ```python
+  {code}
+  ```
+  
+  Class Name: {name}
+  Context: {context}
+  
+  Provide documentation that includes:
+  1. A clear description of the class's purpose in the P&C insurance domain
+  2. Details about key properties/attributes
+  3. A high-level overview of methods
+  4. Any insurance-specific terminology explained
+  5. Usage examples in the P&C insurance context
+  
+  Format the response in markdown.
+
+function: |
+  You are an expert technical writer specializing in P&C insurance software documentation.
+  
+  Generate comprehensive documentation for the following function from a P&C insurance system:
+  
+  ```python
+  {code}
+  ```
+  
+  Function Name: {name}
+  Context: {context}
+  
+  Provide documentation that includes:
+  1. A clear description of the function's purpose in the P&C insurance context
+  2. Detailed parameter descriptions with types and default values
+  3. Return value description with type
+  4. Exception information if relevant
+  5. P&C insurance domain-specific notes about usage
+  6. A practical example of using this function in an insurance scenario
+  
+  Format the response in markdown.
+
+module: |
+  You are an expert technical writer specializing in P&C insurance software documentation.
+  
+  Generate comprehensive documentation for the following module from a P&C insurance system:
+  
+  ```python
+  {code}
+  ```
+  
+  Module Name: {name}
+  Context: {context}
+  
+  Provide documentation that includes:
+  1. A clear description of the module's purpose in the P&C insurance domain
+  2. Summary of key components/functions contained within
+  3. Dependencies and relationships to other modules
+  4. Usage patterns in a P&C insurance context
+  5. Any insurance-specific terminology or concepts used
+  
+  Format the response in markdown.
+
+variable: |
+  You are an expert technical writer specializing in P&C insurance software documentation.
+  
+  Generate documentation for the following variable from a P&C insurance system:
+  
+  ```python
+  {code}
+  ```
+  
+  Variable Name: {name}
+  Context: {context}
+  
+  Provide documentation that includes:
+  1. Purpose of this variable in the P&C insurance context
+  2. Data type and typical values
+  3. Any constraints or validation rules
+  4. Insurance domain significance
+  
+  Format the response in markdown.
+
+example: |
+  You are an expert technical writer specializing in P&C insurance software documentation.
+  
+  Based on the following code:
+  
+  ```python
+  {code}
+  ```
+  
+  Generate a practical example of how this {name} would be used in a real P&C insurance scenario.
+  Include:
+  1. A realistic use case (e.g., claims processing, policy creation)
+  2. Sample input values that reflect real insurance data
+  3. Expected outputs
+  4. Any edge cases specific to insurance scenarios
+  
+  Format the response in markdown with both the code example and explanatory text.

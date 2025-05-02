@@ -1,0 +1,74 @@
+# calculate\_basic\_premium Function Documentation
+
+This function calculates a basic insurance premium based on the value of the insured property, location risk factor, and age risk factor.
+
+## Purpose
+
+The `calculate_basic_premium` function is used to calculate a basic insurance premium for a given property. The premium is calculated using a formula that takes into account the value of the property, the location risk factor, and the age risk factor.
+
+## Parameters
+
+### `property_value`
+
+**Type:** `int` or `float`
+
+**Default Value:** None
+
+The value of the insured property. The property value should be in USD.
+
+### `location_factor`
+
+**Type:** `float`
+
+**Default Value:** 1.0
+
+The risk factor based on location. The location factor is a value between 1.0 and 2.0, where 1.0 represents low risk and 2.0 represents high risk.
+
+### `age_factor`
+
+**Type:** `float`
+
+**Default Value:** 1.0
+
+The risk factor based on age. The age factor is a value between 0.8 and 1.5, where 0.8 represents low risk and 1.5 represents high risk.
+
+## Return Value
+
+### `calculated_premium`
+
+**Type:** `float`
+
+The calculated basic insurance premium.
+
+## Example Usage
+
+Here's an example of how to use the `calculate_basic_premium` function in an insurance scenario:
+
+```python
+property_value = 100000
+location_factor = 1.2
+age_factor = 1.5
+
+calculated_premium = calculate_basic_premium(property_value, location_factor, age_factor)
+print("Calculated premium:", calculated_premium)
+```
+
+Output:
+
+```
+Calculated premium: 1050.0
+```
+
+In this example, we calculate the basic insurance premium for a property with a value of $100,000, located in an area with a location risk factor of 1.2 and an age risk factor of 1.5.
+
+## Notes
+
+- The `calculate_basic_premium` function assumes that the property value is in USD.
+- The location and age risk factors are used to adjust the base rate of $500, which represents the annual premium for a low-risk property. The formula used to calculate the adjusted rate is:
+
+```python
+adjusted_rate = base_rate * (property_value / 100000) * location_factor * age_factor
+```
+
+- The calculated premium is returned as a float value.
+- This function does not handle exceptions or errors. If an error occurs, the function will continue executing and may produce unexpected results.

@@ -1,0 +1,55 @@
+# Mini Insurance Calculator for P&C Insurance
+
+This module provides a simplified implementation of basic P&C insurance calculations. It is designed to help insurers quickly calculate premiums and coverage amounts for their policies.
+
+## Key Components/Functions
+
+The module contains two key components:
+
+1. **InsurancePolicy**: A class representing a basic insurance policy for P&C insurance. This class initializes a new policy with the given policy ID, customer name, premium amount, and coverage amount.
+2. **calculate_basic_premium**: A function that calculates a basic insurance premium based on property value, location factor, and age factor. It takes three arguments: property\_value (the value of the insured property), location\_factor (a risk factor based on the property's location), and age\_factor (a risk factor based on the customer's age). The function returns the calculated premium.
+
+## Dependencies and Relationships to Other Modules
+
+This module does not have any direct dependencies or relationships with other modules. However, it may be used in conjunction with other modules that handle policy management, claims processing, and reporting.
+
+## Usage Patterns in a P&C Insurance Context
+
+The Mini Insurance Calculator can be used by insurers to quickly calculate premiums for their policies. It can also be used by underwriters to estimate the cost of new policies based on property value, location, and age factors.
+
+## Insurance-Specific Terminology/Concepts Used
+
+The Mini Insurance Calculator uses some insurance-specific terminology and concepts, such as:
+
+1. **Premium**: The annual payment made by the insured to maintain an active policy.
+2. **Coverage Amount**: The maximum amount of coverage provided by the policy.
+3. **Location Factor**: A risk factor based on the property's location, which is used to adjust the premium rate.
+4. **Age Factor**: A risk factor based on the customer's age, which is used to adjust the premium rate.
+
+## Example Usage
+
+Here is an example of how the Mini Insurance Calculator can be used:
+
+```python
+# Calculate a premium
+premium = calculate_basic_premium(
+    property_value=250000,
+    location_factor=get_location_factor("60601"),
+    age_factor=1.1
+)
+
+# Create a policy
+policy = InsurancePolicy(
+    policy_id="P12345",
+    customer_name="Jane Smith",
+    premium=premium,
+    coverage_amount=250000
+)
+
+# Print information
+print(f"Policy created for {policy.customer_name}")
+print(f"Annual premium: ${premium:.2f}")
+print(f"Monthly payment: ${policy.calculate_monthly_payment():.2f}")
+```
+
+In this example, we calculate a basic premium using the `calculate_basic_premium` function and then create an `InsurancePolicy` object with the calculated premium and coverage amount. Finally, we print out some information about the policy, including the annual premium and monthly payment.

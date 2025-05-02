@@ -1,0 +1,25 @@
+# cancel\_policy Function Documentation
+
+## Purpose
+This function cancels an existing policy by setting its `is_active` attribute to `False`. This is useful when a policyholder decides not to renew their policy or if the policy has been terminated due to some other reason.
+
+## Parameters
+The function takes no parameters.
+
+## Return Value
+None. The function does not return any value.
+
+## Exceptions
+This function does not raise any exceptions.
+
+## Example Usage
+To cancel a policy, simply call the `cancel_policy` method on the policy object:
+```python
+policy = InsurancePolicy(policy_id='123456789', customer_name='John Smith', premium=1000, coverage_amount=50000)
+policy.calculate_monthly_payment()
+```
+This will calculate the monthly payment for the policy and return the amount. If you want to cancel the policy, simply call the `cancel_policy` method on the policy object:
+```python
+policy.cancel_policy()
+```
+This will set the `is_active` attribute of the policy object to `False`, effectively cancelling the policy.

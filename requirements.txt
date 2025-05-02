@@ -1,0 +1,17 @@
+# Core dependencies
+pyyaml>=6.0        # Configuration file parsing
+markdown>=3.4.1    # Markdown to HTML conversion
+
+# LLM dependencies
+llama-cpp-python>=0.1.65    # Llama model support
+ctransformers>=0.2.24       # Mistral model support
+
+# Code parsing
+ast-comments>=1.0.1         # For extracting comments from Python AST
+
+# Documentation generation
+pygments>=2.13.0            # Syntax highlighting for code blocks
+jinja2>=3.1.2               # Template engine (for advanced templating)
+
+# Testing
+pytest>=7.3.1               # Testing framework

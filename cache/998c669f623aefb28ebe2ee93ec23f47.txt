@@ -1,0 +1,47 @@
+# InsurancePolicy Class
+
+## Purpose
+The `InsurancePolicy` class represents a basic insurance policy for Property and Casualty (P&C) insurance. It is used to calculate monthly payments, check if a policy is active or not, and cancel a policy.
+
+## Parameters
+### `policy_id`
+- **Type:** string
+- **Default Value:** None
+- **Description:** A unique identifier for the policy.
+
+### `customer_name`
+- **Type:** string
+- **Default Value:** None
+- **Description:** The name of the insured customer.
+
+### `premium`
+- **Type:** float
+- **Default Value:** None
+- **Description:** The annual premium amount for the policy.
+
+### `coverage_amount`
+- **Type:** float
+- **Default Value:** None
+- **Description:** The maximum coverage amount for the policy.
+
+## Return Value
+The function returns a monthly payment amount of type float.
+
+## Exceptions
+No exceptions are thrown by this function.
+
+## Usage Example
+Here's an example usage of the `InsurancePolicy` class:
+
+```python
+from InsuranceCalculator import InsurancePolicy
+
+# Create a new policy with policy_id=12345, customer_name='John Smith', premium=1000, and coverage_amount=50000.
+policy = InsurancePolicy(12345, 'John Smith', 1000, 50000)
+
+# Calculate the monthly payment for this policy.
+monthly_payment = policy.calculate_monthly_payment()
+print('Monthly Payment:', monthly_payment)
+```
+
+This code creates a new `InsurancePolicy` object with the given parameters and calculates the monthly payment using the `calculate_monthly_payment()` method. The output will be the monthly payment amount for this policy.

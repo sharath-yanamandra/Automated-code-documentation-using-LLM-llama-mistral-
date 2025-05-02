@@ -1,0 +1,52 @@
+# get_location_factor Function Documentation
+
+## Purpose
+The `get_location_factor` function is used to determine the location risk factor based on a given ZIP code. This function is used in P&C insurance software to calculate insurance premiums.
+
+## Parameters
+### zip_code (str)
+The ZIP code of the property being insured. The type of this parameter is `str` and its default value is an empty string (`''`).
+
+## Return Value
+The function returns a location risk factor between 1.0 and 2.0.
+
+## Exceptions
+No exceptions are thrown by this function.
+
+## Usage Notes
+This function is used in the `calculate_basic_premium` function to determine the location risk factor based on a given ZIP code. The location risk factor is then multiplied with an age risk factor and a base rate to calculate the insurance premium.
+
+## Example Usage
+```python
+from pymysql import connect
+import pandas as pd
+
+# Connect to MySQL database
+conn = connect(host='localhost', user='root', password='password', db='insurance')
+
+# Load policy data from CSV file
+policy_data = pd.read_csv('policy_data.csv')
+
+# Calculate insurance premiums for all policies
+for index, row in policy_data.iterrows():
+    property_value = row['property_value']
+    age = row['age']
+    zip_code = row['zip_code']
+    
+    # Get location risk factor based on ZIP code
+    location_factor = get_location_factor(zip_code)
+    
+    # Calculate age risk factor
+    if age < 18:
+        age_factor = 0.8
+    elif age >= 18 and age < 65:
+        age_factor = 1.2
+    else:
+        age_factor = 1.5
+    
+    # Calculate basic premium
+    basic_premium = calculate_basic_premium(property_value, location_factor, age_factor)
+    
+    # Update policy data with calculated premium
+    policy_data.at[index, 'premium'] = basic_premium
+```

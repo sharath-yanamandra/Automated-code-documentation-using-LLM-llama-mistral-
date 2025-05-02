@@ -1,0 +1,36 @@
+2025-05-02 15:56:11,070 - root - INFO - Logging initialized at 2025-05-02 15:56:11
+2025-05-02 15:56:11,070 - root - INFO - Log level: INFO
+2025-05-02 15:56:11,070 - root - INFO - Log file: logs/auto_doc.log
+2025-05-02 15:56:11,070 - __main__ - INFO - Starting documentation generation at 2025-05-02 15:56:11.070511
+2025-05-02 15:56:11,484 - src.llm.mistral_handler - INFO - Loading Mistral model from models/mistral-7b-instruct-v0.1.Q2_K.gguf...
+2025-05-02 15:56:13,808 - src.llm.mistral_handler - INFO - Mistral model loaded successfully
+2025-05-02 15:56:13,858 - __main__ - INFO - Found 1 source files to process
+2025-05-02 15:56:13,858 - __main__ - INFO - Processing file: data/input\mini_insurance.py
+2025-05-02 15:56:13,859 - __main__ - ERROR - Error during execution: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Auto_document_generator_updated\src\main.py", line 114, in main
+    code=component['code'],
+         ~~~~~~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-02 15:58:16,586 - root - INFO - Logging initialized at 2025-05-02 15:58:16
+2025-05-02 15:58:16,586 - root - INFO - Log level: INFO
+2025-05-02 15:58:16,586 - root - INFO - Log file: logs/auto_doc.log
+2025-05-02 15:58:16,587 - __main__ - INFO - Starting documentation generation at 2025-05-02 15:58:16.587179
+2025-05-02 15:58:16,988 - src.llm.mistral_handler - INFO - Loading Mistral model from models/mistral-7b-instruct-v0.1.Q2_K.gguf...
+2025-05-02 15:58:18,840 - src.llm.mistral_handler - INFO - Mistral model loaded successfully
+2025-05-02 15:58:18,853 - __main__ - INFO - Found 1 source files to process
+2025-05-02 15:58:18,853 - __main__ - INFO - Processing file: data/input\mini_insurance.py
+2025-05-02 16:10:27,068 - src.doc_generator.markdown_gen - INFO - Generated documentation for mini_insurance.py at data/output\mini_insurance.md
+2025-05-02 16:10:27,069 - src.doc_generator.markdown_gen - INFO - Generated index file at data/output\index.md
+2025-05-02 16:10:27,070 - __main__ - INFO - Documentation generation completed successfully!
+2025-05-02 16:14:19,317 - root - INFO - Logging initialized at 2025-05-02 16:14:19
+2025-05-02 16:14:19,318 - root - INFO - Log level: INFO
+2025-05-02 16:14:19,318 - root - INFO - Log file: logs/auto_doc.log
+2025-05-02 16:14:19,318 - __main__ - INFO - Starting documentation generation at 2025-05-02 16:14:19.318407
+2025-05-02 16:14:19,739 - src.llm.mistral_handler - INFO - Loading Mistral model from models/mistral-7b-instruct-v0.1.Q2_K.gguf...
+2025-05-02 16:14:21,659 - src.llm.mistral_handler - INFO - Mistral model loaded successfully
+2025-05-02 16:14:21,661 - __main__ - INFO - Found 1 source files to process
+2025-05-02 16:14:21,661 - __main__ - INFO - Processing file: data/input\mini_insurance.py
+2025-05-02 16:14:21,824 - src.doc_generator.markdown_gen - INFO - Generated documentation for mini_insurance.py at data/output\mini_insurance.md
+2025-05-02 16:14:21,826 - src.doc_generator.markdown_gen - INFO - Generated index file at data/output\index.md
+2025-05-02 16:14:21,826 - __main__ - INFO - Documentation generation completed successfully!

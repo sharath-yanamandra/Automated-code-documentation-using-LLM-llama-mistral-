@@ -1,0 +1,72 @@
+# InsurancePolicy Class
+
+The `InsurancePolicy` class represents a basic insurance policy for P&C insurance. It is designed to simplify the process of calculating monthly payments and managing policy details.
+
+## Properties/Attributes
+
+### `policy_id`
+
+A unique identifier for the policy. This attribute is used to identify the policy within the system.
+
+### `customer_name`
+
+The name of the insured customer. This attribute stores the name of the person or entity that is covered by the policy.
+
+### `premium`
+
+The annual premium amount for the policy. This attribute stores the amount paid by the insured customer each year to maintain coverage.
+
+### `coverage_amount`
+
+The maximum coverage amount for the policy. This attribute stores the maximum amount that the policy will pay out in the event of a covered loss.
+
+### `is_active`
+
+A boolean indicating whether the policy is currently active or not. This attribute is used to manage the status of the policy and determine whether it is eligible for coverage.
+
+## Methods
+
+### `__init__(policy_id, customer_name, premium, coverage_amount)`
+
+Initializes a new insurance policy with the given parameters. This method creates a new instance of the `InsurancePolicy` class and sets its properties based on the input values.
+
+### `calculate_monthly_payment()`
+
+Calculates the monthly payment for this policy. This method returns the amount that the insured customer must pay each month to maintain coverage under the policy.
+
+## Insurance-Specific Terminology
+
+The following terms are used in the context of P&C insurance:
+
+### `premium`
+
+The annual premium amount paid by the insured customer to maintain coverage under the policy. The premium is typically calculated as a percentage of the coverage amount.
+
+### `coverage_amount`
+
+The maximum amount that the policy will pay out in the event of a covered loss. This is also known as the limit of liability.
+
+## Usage Examples
+
+Here are some examples of how to use the `InsurancePolicy` class in the context of P&C insurance:
+
+```python
+# Create a new policy with a unique identifier, customer name, premium amount, and coverage amount
+policy = InsurancePolicy(1234567890, "John Doe", 1000.00, 500000)
+
+# Calculate the monthly payment for the policy
+monthly_payment = policy.calculate_monthly_payment()
+print(f"Monthly Payment: ${monthly_payment}")
+```
+
+In this example, we create a new `InsurancePolicy` instance with a unique identifier of 1234567890, a customer name of "John Doe", a premium amount of $1000.00 per year, and a coverage amount of $500,000. We then call the `calculate_monthly_payment` method to calculate the monthly payment for the policy, which we print to the console.
+
+```python
+# Check if the policy is active or not
+if policy.is_active:
+    print("Policy is active")
+else:
+    print("Policy is inactive")
+```
+
+In this example, we check the `is_active` attribute of the policy to determine whether it is currently eligible for coverage. If the attribute is `True`, we print a message indicating that the policy is active. Otherwise, we print a message indicating that the policy is inactive.

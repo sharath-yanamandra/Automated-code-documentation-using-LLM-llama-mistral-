@@ -1,0 +1,53 @@
+# calculate\_monthly\_payment Function Documentation
+
+The `calculate_monthly_payment` function calculates the monthly payment for a given P&C insurance policy.
+
+## Parameters
+
+### `self`
+
+Type: `InsurancePolicy` object
+Default Value: None
+
+Description: The instance of the `InsurancePolicy` class that this function belongs to. This parameter is required and must be an instance of the `InsurancePolicy` class.
+
+### `None`
+
+Type: `None`
+Default Value: None
+
+Description: No description provided.
+
+## Return Value
+
+Type: `float`
+
+Description: The monthly payment amount for the given P&C insurance policy. This value is returned as a float.
+
+## Exceptions
+
+No exceptions are thrown by this function.
+
+## Example Usage
+
+Here's an example of how to use the `calculate_monthly_payment` function in a P&C insurance scenario:
+
+```python
+from pccalculator import InsurancePolicy
+
+# Create a new P&C insurance policy
+policy = InsurancePolicy("12345", "John Smith", 1000, 50000)
+
+# Calculate the monthly payment for this policy
+monthly_payment = policy.calculate_monthly_payment()
+
+print(f"Monthly Payment: ${monthly_payment:.2f}")
+```
+
+In this example, we create a new P&C insurance policy with the policy ID "12345", customer name "John Smith", annual premium of 1000, and maximum coverage amount of 50,000. We then call the `calculate_monthly_payment` function to calculate the monthly payment for this policy and print the result. The output should be:
+
+```
+Monthly Payment: $83.33
+```
+
+This means that the monthly payment for this policy is $83.33.

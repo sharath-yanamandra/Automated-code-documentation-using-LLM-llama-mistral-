@@ -1,0 +1,43 @@
+# Auto Documentation Generator Configuration
+
+# Project information
+project_name: "P&C Insurance Code Documentation"
+project_description: "Automated documentation for P&C Insurance codebase"
+
+# Directories
+input_dir: "data/input"
+output_dir: "data/output"
+template_dir: "config/templates"
+log_file: "logs/auto_doc.log"
+
+# Files to process
+code_language: "python"  # supported: python, java
+file_extensions: [".py", ".java"]
+
+# Documentation options
+output_format: "markdown"  # supported: markdown, html
+generate_index: true
+include_examples: true
+include_type_hints: true
+include_source_links: true
+
+# LLM Configuration
+llm:
+  type: "mistral"  # supported: llama, mistral
+  model_path: "models/mistral-7b-instruct-v0.1.Q2_K.gguf"  # Local model path
+  context_length: 4096
+  temperature: 0.2
+  top_p: 0.9
+  max_tokens: 1024
+  cache_dir: "cache"
+  quantization: "q4_0"  # Quantization for efficiency on consumer hardware
+
+# Parser options
+parser:
+  include_comments: true
+  include_docstrings: true
+  parse_dependencies: true
+  max_context_lines: 50
+  
+# Prompt templates file
+prompt_templates: "config/prompt_templates.yaml"
