@@ -1,4 +1,4 @@
-# Automated-code-documentation-using-LLM-llama-mistral-models
+# Automated-code-documentation-using-LLM-llama-mistral-models (for now it works on mistral, if llama model is also downloaded, then it should work with it too)
 # Automated Code Documentation Generator for P&C Insurance
 
 A specialized documentation generator that uses local Large Language Models (LLMs) to automatically create comprehensive documentation for Property & Casualty (P&C) insurance codebases.
